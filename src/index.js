@@ -8,7 +8,7 @@ import { AppContextProvider } from './context/AppContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename='/multi-step-form'>
       <AppContextProvider>
         <App />
       </AppContextProvider>
