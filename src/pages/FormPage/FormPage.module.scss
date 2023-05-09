@@ -1,0 +1,58 @@
+@import '../../variables.scss';
+
+.form {
+   display: flex;
+   flex-direction: column;
+   gap: 1.4rem;
+}
+
+.form-name,
+.form-email,
+.form-phone {
+   display: flex;
+   flex-direction: column;
+   gap: 0.4rem;
+}
+
+.form-label {
+   color: $marine-blue;
+   display: flex;
+   justify-content: space-between;
+}
+
+.form-page-input {
+   padding: 0.5rem;
+   border-radius: 5px;
+   border: none;
+   outline: 1px solid $light-gray;
+   font-family: 'ubuntu';
+   transition: 0.3s;
+
+   &--invalid {
+      outline: 1px solid $strawberry-red;
+   
+      &__message {
+         color: $strawberry-red;
+         font-weight: bold;
+         animation: invalid-message-animation 0.1s 2;
+      }
+   
+      @keyframes invalid-message-animation {
+         0% {
+            transform: translateX(-15px);
+         }
+         50% {
+            transform: translateX(15px);
+         }
+         100% {
+            transform: translateX(0px);
+         }
+      }
+   }
+   
+
+   &:focus {
+      outline: 1px solid $marine-blue;
+   }
+}
+

@@ -1,0 +1,72 @@
+@import '../../variables.scss';
+
+.progress-bar {
+   width: clamp(200px, 20vw, 230px);
+   background: url('../../assets/images/bg-sidebar-desktop.svg') no-repeat center;
+   background-size: cover;
+   border-radius: 17px;
+
+   @media (max-width: 720px) {
+      display: flex;
+      justify-content: center;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25vh;
+      background: url('../../assets/images/bg-sidebar-mobile.svg') no-repeat center;
+      background-size: cover;
+      border-radius: 0;
+      z-index: -1;
+   }
+}
+
+.progress-steps {
+   padding: 2rem clamp(1rem, 2vw, 2rem);
+   display: flex;
+   flex-direction: column;
+   gap: 1.7rem;
+
+   @media (max-width: 720px) {
+      flex-direction: row;
+      gap: 1rem;
+   }
+}
+
+.progress-step {
+   display: flex;
+   gap: 1rem;
+   color: #fff;
+   text-transform: uppercase;
+}
+
+.circle {
+   width: 2.5rem;
+   height: 2.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 100%;
+   border: 1px solid #fff;
+   color: #fff;
+   font-weight: bold;
+   font-size: 1.1rem;
+
+   &--active {
+      color: #000;
+      background-color: $light-blue;
+      transition: 0.3s;
+      border: none;
+   }
+}
+
+.step-number {
+   font-size: 0.9rem;
+   opacity: 0.8;
+}
+
+.step-name {
+   font-weight: bold;
+   letter-spacing: 0.1rem;
+   font-size: clamp(0.6rem, 2vw, 1rem);
+}

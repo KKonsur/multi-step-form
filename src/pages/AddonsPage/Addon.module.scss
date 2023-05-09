@@ -1,0 +1,72 @@
+@import '../../variables.scss';
+
+.addon {
+   border-radius: 10px;
+   border: 1px solid $light-gray;
+   transition: 0.2s;
+
+   &:hover {
+      border: 1px solid $purplish-blue;
+      cursor: pointer;
+   }
+
+   &--checked {
+      background-color: $magnolia;
+      border: 1px solid $purplish-blue;
+   }
+
+   &__content {
+      display: flex;
+      align-items: center;
+      padding: 1.4rem;
+      border-radius: 10px;
+      position: relative;
+   }
+
+   &__checkbox {
+      margin-right: 1.4rem;
+      width: 20px;
+      height: 20px;
+      appearance: none;
+      border: 2px solid $light-gray;
+      border-radius: 3px;
+      position: relative;
+      transition: 0.2s;
+
+      &:checked {
+         border: 2px solid $purplish-blue;
+         background-color: $purplish-blue;
+
+         &::after {
+            content: url('../../assets/images/icon-checkmark.svg');
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+         }
+      }
+   }
+
+   &__price {
+      position: absolute;
+      right: clamp(1rem, 1.5vw, 1.4rem);
+      color: $purplish-blue;
+      font-weight: 500;
+   }
+
+   &__text {
+      line-height: 1.2rem;
+      font-weight: 500;
+   }
+
+   &__name {
+      color: $marine-blue;
+      font-weight: 700;
+      font-size: 1.1rem;
+   }
+
+   &__description {
+      font-size: 0.9rem;
+      color: $cool-gray;
+   }
+}

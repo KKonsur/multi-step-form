@@ -1,0 +1,18 @@
+@import '../../variables.scss';
+
+.header {
+   margin-top: 2rem;
+}
+
+.heading {
+   margin-bottom: 1rem;
+   color: $marine-blue;
+   font-size: clamp(1.5rem, 3vw, 2.3rem);
+}
+
+.subheading {
+   font-size: clamp(1rem, 2.5vw, 1.3rem);
+   font-weight: normal;
+   color: $cool-gray;
+   margin-bottom: 2.5rem;
+}

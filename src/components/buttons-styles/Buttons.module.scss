@@ -1,0 +1,57 @@
+@import '../../variables.scss';
+
+.buttons {
+   display: flex;
+   justify-content: flex-end;
+   margin-bottom: 1rem;
+
+   &--two-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      @media (max-width:720px) {
+         margin-top: 2rem;
+      }
+   }
+
+   @media (max-width:720px) {
+      margin-top: 2rem;
+   }
+}
+
+.button-next,
+.button-confirm {
+   padding: 1rem 1.5rem;
+   border: none;
+   border-radius: 10px;
+   color: #fff;
+   background-color: $marine-blue;
+   font-family: 'ubuntu';
+   font-size: 1.3rem;
+   cursor: pointer;
+   transition: 0.3s;
+
+   &:hover {
+      opacity: 0.93;
+   }
+}
+
+.button-confirm {
+   background-color: $purplish-blue;
+}
+
+.button-back {
+   color: $cool-gray;
+   border: none;
+   background: none;
+   font-family: 'ubuntu';
+   font-size: 1.3rem;
+   cursor: pointer;
+   transition: 0.3s;
+
+   &:hover {
+      color: $marine-blue;
+   }
+}

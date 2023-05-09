@@ -1,0 +1,58 @@
+@import '../../variables.scss';
+
+.selected-plan {
+   width: 100%;
+   border-radius: 10px;
+   border: 1px solid $light-gray;
+   cursor: pointer;
+   transition: 0.3s;
+
+   @media (max-width: 720px) {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+   }
+
+   &--active,
+   &:hover {
+      background-color: $magnolia;
+      border: 1px solid $purplish-blue;
+   }
+
+   img {
+      margin-bottom: 4.5rem;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      width: 25%;
+
+      @media (max-width: 720px) {
+         width: 10%;
+         margin: 0;
+      }
+   }
+}
+
+.plan-info {
+   margin-bottom: 1rem;
+   margin-left: 1rem;
+   line-height: 1.7rem;
+
+   @media (max-width: 720px) {
+      margin: 0;
+   }
+}
+
+.plan-name {
+   font-size: clamp(1rem, 2vw, 1.5rem);
+   font-weight: bold;
+   color: $marine-blue;
+}
+
+.plan-price {
+   color: $cool-gray;
+}
+
+.plan-promo {
+   font-size: 0.8rem;
+   color: $marine-blue;
+}
